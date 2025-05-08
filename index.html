@@ -6,146 +6,282 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
-    <title>Cheng Qiao JLHS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Cheng Qiao JLHS Portfolio</title>
     <style>
-       .hover-scale {
-            transition: transform 0.3s ease;
-        }
-
-       .hover-scale:hover {
-            transform: scale(1.05);
-        }
-
-       .portfolio-img {
-            max-width: 50%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-        .portfolio-img1 {
-            max-width: 70%;
-            height: auto;
-            transition: transform 0.3s ease;
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
         }
         
-        .portfolio-img2 {
-            max-width: 30%;
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hover-scale {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .portfolio-img {
+            max-width: 100%;
             height: auto;
-            transition: transform 0.3s ease;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border-radius: 8px;
         }
-
-       .portfolio-img:hover {
-            transform: scale(1.05);
+        
+        .portfolio-img:hover {
+            transform: scale(1.03);
         }
-
-       .large-section {
-            grid-column: span 2;
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
-
-      
-
-        body {
-            font-family: 'Inter', sans-serif;
+        
+        .header-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-
-        h1,
-        h2 {
-            font-family: 'Roboto', sans-serif;
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 3px;
+        }
+        
+        .audio-player {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer-links a {
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #667eea;
+            transform: translateX(3px);
+        }
+        
+        .project-card {
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .large-section {
+                grid-column: span 2;
+            }
         }
     </style>
 </head>
 
-<body class="bg-gray-100 text-gray-800 font-sans">
-    <header class="bg-white shadow-md p-8 text-center">
-        <h1 class="text-4xl font-bold text-blue-600">Jame Logan High School <br>Advanced Multimedia Portfolio</h1>
+<body class="gradient-bg">
+    <header class="header-gradient text-white py-12 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Cheng Qiao</h1>
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6">James Logan High School Advanced Multimedia Portfolio</h2>
+            <p class="text-lg opacity-90 max-w-2xl mx-auto">Showcasing my creative journey through digital design, animation, and multimedia projects</p>
+        </div>
     </header>
-    <main class="container mx-auto p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- 作品 1 -->
-        <section class="bg-white p-6 rounded-lg shadow-md hover-scale large-section">
-            <h2 class="text-2xl font-bold mb-4 text-blue-500">College & Career Center Animated GIF</h2>
-            <div class="flex flex-wrap mb-4 justify-center">
-                <img src="careers_Cheng_Qiao.gif.gif" alt="作品1" class="portfolio-img1 p-2">
+    
+    <main class="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl">
+        <!-- Project 1 -->
+        <section class="project-card hover-scale large-section">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">College & Career Center Animated GIF</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <img src="careers_Cheng_Qiao.gif.gif" alt="College & Career Center Animation" class="portfolio-img">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    This animated GIF was created for our school's College & Career Center to promote their services. Using Adobe Photoshop's timeline feature, I designed a sequence that highlights key resources available to students. The animation begins with our school mascot guiding viewers through different college planning tools, followed by statistics about our graduates' success. I paid special attention to smooth transitions between scenes and consistent branding colors throughout. The project taught me valuable lessons about timing in animations and creating engaging content for educational purposes.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Animation</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Photoshop</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Graphic Design</span>
+                </div>
             </div>
-            <p class="text-gray-700 leading-relaxed">
-                这里填写作品1的200英文单词简介。
-            </p>
         </section>
-        <!-- 作品 2 -->
-        <section class="bg-white p-6 rounded-lg shadow-md hover-scale">
-            <h2 class="text-2xl font-bold mb-4 text-blue-500">Colt Brew Logos</h2>
-            <div class="flex flex-wrap mb-4 justify-center">
-                <img src="cheng- Colt_Brew.png" alt="作品2" class="portfolio-img2 p-2"><img src="Cheng_CT.png" alt="作品2" class="portfolio-img2 p-2"><img src="Cheng_EE1.png" alt="作品2" class="portfolio-img2 p-2">
+        
+        <!-- Project 2 -->
+        <section class="project-card hover-scale">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">Colt Brew Logos</h2>
+                <div class="flex flex-wrap mb-6 justify-center gap-4">
+                    <img src="cheng- Colt_Brew.png" alt="Colt Brew Logo" class="portfolio-img2">
+                    <img src="Cheng_CT.png" alt="Colt Brew Variation" class="portfolio-img2">
+                    <img src="Cheng_EE1.png" alt="Colt Brew Alternative" class="portfolio-img2">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    These logo designs were created for a hypothetical school coffee shop called "Colt Brew" (our mascot is the Colts). I developed three distinct variations exploring different styles: a classic badge, a modern minimalist mark, and an illustrative approach. Each version maintains brand consistency while offering unique visual appeal. The project involved extensive sketching, vector refinement in Adobe Illustrator, and testing at various sizes. The final logos work effectively in both color and black-and-white applications, demonstrating my growing understanding of scalable vector design.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Logo Design</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Illustrator</span>
+                    <span class="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm">Branding</span>
+                </div>
             </div>
-            <p class="text-gray-700 leading-relaxed">
-                这里填写作品2的200英文单词简介。
-            </p>
         </section>
-        <!-- 作品 3 -->
-        <section class="bg-white p-6 rounded-lg shadow-md hover-scale">
-            <h2 class="text-2xl font-bold mb-4 text-blue-500">作品3名称</h2>
-            <div class="flex flex-wrap mb-4 justify-center">
-                <img src="Cheng_Qiao _2026.gif" alt="作品3" class="portfolio-img p-2">
+        
+        <!-- Project 3 -->
+        <section class="project-card hover-scale">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">Animated Self-Portrait</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <img src="Cheng_Qiao _2026.gif" alt="Animated Self-Portrait" class="portfolio-img">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    This animated self-portrait combines digital illustration with motion graphics to create a personal branding piece. Using frame-by-frame animation techniques, I brought my illustrated avatar to life with subtle movements and expressions. The project challenged me to consider how personality can be conveyed through animation timing and motion paths. I experimented with different easing techniques to make the movements feel natural. The color palette was carefully selected to represent my artistic style while maintaining visual harmony throughout the animation sequence.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm">Illustration</span>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Animation</span>
+                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Character Design</span>
+                </div>
             </div>
-            <p class="text-gray-700 leading-relaxed">
-                这里填写作品3的200英文单词简介。
-            </p>
         </section>
-        <!-- 作品 4 -->
-        <section class="bg-white p-6 rounded-lg shadow-md hover-scale">
-            <h2 class="text-2xl font-bold mb-4 text-blue-500">作品4名称</h2>
-            <div class="flex flex-wrap mb-4 justify-center">
-                <img src="Cheng_Qiao Library logo.png" alt="作品4" class="portfolio-img1 p-2">
+        
+        <!-- Project 4 -->
+        <section class="project-card hover-scale">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">Library Logo Design</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <img src="Cheng_Qiao Library logo.png" alt="Library Logo" class="portfolio-img1">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Created for our school library's rebranding initiative, this logo combines literary elements with our school identity. The open book forms the shape of our mascot's horseshoe, symbolizing both learning and school pride. I went through multiple iterations, testing different typography treatments and icon combinations. The final design works effectively at small sizes for library cards and large formats for wall graphics. This project deepened my understanding of symbolic representation in logo design and the importance of creating versatile branding assets.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Logo Design</span>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Typography</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Vector Art</span>
+                </div>
             </div>
-            <p class="text-gray-700 leading-relaxed">
-                这里填写作品4的200英文单词简介。
-            </p>
         </section>
-        <!-- 作品 5 -->
-        <section class="bg-white p-6 rounded-lg shadow-md hover-scale">
-            <h2 class="text-2xl font-bold mb-4 text-blue-500">作品5名称</h2>
-            <div class="flex flex-wrap mb-4 justify-center">
-                <img src="Cheng_Qiao.png" alt="作品5" class="portfolio-img p-2">
+        
+        <!-- Project 5 -->
+        <section class="project-card hover-scale">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">Digital Illustration Series</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <img src="Cheng_Qiao.png" alt="Digital Illustration" class="portfolio-img">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    This series of digital illustrations explores different artistic styles and techniques. Using Adobe Photoshop and a graphics tablet, I experimented with brush settings, layer blending modes, and color theory principles. Each piece in the series demonstrates my progression in digital painting skills, from basic shading to more advanced lighting effects. The project helped me develop my personal artistic voice while learning to adapt to different visual styles. Particular focus was given to creating depth and texture in digital media.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm">Digital Art</span>
+                    <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Illustration</span>
+                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Painting</span>
+                </div>
             </div>
-            <p class="text-gray-700 leading-relaxed">
-                这里填写作品5的200英文单词简介。
-            </p>
         </section>
-        <!-- 作品 6 -->
-        <section class="bg-white p-6 rounded-lg shadow-md hover-scale">
-            <h2 class="text-2xl font-bold mb-4 text-blue-500">作品6名称</h2>
-            <div class="flex flex-wrap mb-4 justify-center">
-                <audio controls class="w-1/2">
-                    <source src="Cheng_Qiao_2026.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
+        
+        <!-- Project 6 -->
+        <section class="project-card hover-scale">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">Audio Composition</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <audio controls class="audio-player">
+                        <source src="Cheng_Qiao_2026.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    This original audio composition was created using digital audio workstation software. The piece combines synthesized elements with recorded sounds to create an atmospheric musical work. I explored concepts of rhythm, melody, and sound design, layering different tracks to build complexity. The project involved learning about equalization, compression, and spatial effects to create a polished final product. This foray into audio production complemented my visual work, helping me understand the relationship between sound and image in multimedia projects.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Music</span>
+                    <span class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm">Sound Design</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">DAW</span>
+                </div>
             </div>
-            <p class="text-gray-700 leading-relaxed">
-                这里填写作品6的200英文单词简介。
-            </p>
         </section>
-        <!-- 作品 7 -->
-        <section class="bg-white p-6 rounded-lg shadow-md hover-scale">
-            <h2 class="text-2xl font-bold mb-4 text-blue-500">作品7名称</h2>
-            <div class="flex flex-wrap mb-4 justify-center">
-                <img src="ps DDT.png" alt="作品7" class="portfolio-img1 p-2 rotated-img">
+        
+        <!-- Project 7 -->
+        <section class="project-card hover-scale">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">Digital Painting: DDT</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <img src="ps DDT.png" alt="Digital Painting" class="portfolio-img1">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    This digital painting explores the theme of environmental impact through surreal imagery. Created entirely in Photoshop, the piece demonstrates advanced brush techniques and photo manipulation skills. I focused on creating realistic textures and lighting effects to sell the impossible scenario. The composition guides the viewer's eye through careful arrangement of elements and value contrast. This project pushed my technical abilities while allowing creative expression of an important message about ecological responsibility.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-pink-100 text-pink-800 rounded-full text-sm">Digital Painting</span>
+                    <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Photo Manipulation</span>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Concept Art</span>
+                </div>
             </div>
-            <p class="text-gray-700 leading-relaxed">
-                这里填写作品7的200英文单词简介。
-            </p>
         </section>
-        <!-- 作品 8 -->
-        <section class="bg-white p-6 rounded-lg shadow-md hover-scale large-section">
-            <h2 class="text-2xl font-bold mb-4 text-blue-500">作品8名称</h2>
-            <div class="flex flex-wrap mb-4 justify-center">
-                <img src="未标题-1.png" alt="作品8" class="portfolio-img1 p-2">
+        
+        <!-- Project 8 -->
+        <section class="project-card hover-scale large-section">
+            <div class="project-content">
+                <h2 class="section-title text-2xl font-bold mb-4 text-gray-800">Typography Poster Series</h2>
+                <div class="flex flex-wrap mb-6 justify-center">
+                    <img src="未标题-1.png" alt="Typography Poster" class="portfolio-img1">
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    This typography-focused poster series explores the relationship between letterforms and visual communication. Each poster in the series experiments with different type treatments, hierarchy, and composition principles. I researched historical type classifications and contemporary trends to inform my designs. The project challenged me to communicate messages purely through typographic arrangement, without relying on illustrative elements. Attention was given to legibility at various viewing distances and the emotional impact of different typeface selections.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Typography</span>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Poster Design</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">Layout</span>
+                </div>
             </div>
-            <p class="text-gray-700 leading-relaxed">
-                这里填写作品8的200英文单词简介。
-            </p>
         </section>
     </main>
-    <footer class="bg-white shadow-md p-8 text-center">
-        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Cheng Qiao</h3>
+                <p class="text-gray-400">Advanced Multimedia Portfolio<br>James Logan High School</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Contact</h3>
+                <ul class="space-y-2">
+                    <li><a href="mailto:example@student.union.k12.ca.us" class="text-gray-400 hover:text-white transition-colors"><i class="fas fa-envelope mr-2"></i>School Email</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fas fa-globe mr-2"></i>Personal Website</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Follow</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl transition-colors"><i class="fab fa-behance"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl transition-colors"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-6 border-t border-gray-800 text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Cheng Qiao. All rights reserved. | Created with passion for design and technology</p>
+        </div>
     </footer>
 </body>
 
-</html>    
+</html>
